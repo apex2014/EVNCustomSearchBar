@@ -56,7 +56,7 @@
 
 - (void)initView
 {
-    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 44);
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 50);
     if (!_isHiddenCancelButton)
     {
         [self addSubview:self.cancelButton];
@@ -156,7 +156,7 @@
     if (_iconAlign == EVNCustomSearchBarIconAlignCenter && ([self.text isKindOfClass:[NSNull class]] || !self.text || [self.text isEqualToString:@""] || self.text.length == 0) && ![_textField isFirstResponder])
     {
         self.iconCenterImgButton.hidden = NO;
-        _textField.frame = CGRectMake(7, 7, self.frame.size.width - 7*2, 30);
+        _textField.frame = CGRectMake(7, 5, self.frame.size.width - 7*2, 40);
         _textField.textAlignment = NSTextAlignmentCenter;
 
         CGSize titleSize; // 输入的内容或者placeholder数据
@@ -342,7 +342,7 @@
     {
         [UIView animateWithDuration:0.1 animations:^{
             _cancelButton.hidden = NO;
-            _textField.frame = CGRectMake(7, 7, _cancelButton.frame.origin.x - 7, 30);
+            _textField.frame = CGRectMake(7, 5, _cancelButton.frame.origin.x - 7, 40);
             // _textField.transform = CGAffineTransformMakeTranslation(-_cancelButton.frame.size.width,0);
         }];
     }
@@ -371,7 +371,7 @@
     {
         [UIView animateWithDuration:0.1 animations:^{
             _cancelButton.hidden = YES;
-            _textField.frame = CGRectMake(7, 7, self.frame.size.width - 7*2, 30);
+            _textField.frame = CGRectMake(7, 5, self.frame.size.width - 7*2, 40);
             // _textField.transform = CGAffineTransformMakeTranslation(-_cancelButton.frame.size.width,0);
         }];
     }
