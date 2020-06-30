@@ -103,14 +103,15 @@
         _textField.returnKeyType = UIReturnKeySearch;
         _textField.enablesReturnKeyAutomatically = YES;
         _textField.font = [UIFont systemFontOfSize:14.0f];
-        _textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        _textField.clearButtonMode = UITextFieldViewModeAlways;
         [_textField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
         _textField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         _textField.borderStyle = UITextBorderStyleNone;
         _textField.layer.cornerRadius = 3.0f;
         _textField.layer.masksToBounds = YES;
         _textField.leftView.contentMode = UIViewContentModeScaleAspectFit;
-        _textField.backgroundColor = [UIColor colorWithRed:240.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0];
+          _textField.backgroundColor = [UIColor purpleColor];
+//         _textField.backgroundColor = [UIColor colorWithRed:240.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0];
     }
     return _textField;
 }
