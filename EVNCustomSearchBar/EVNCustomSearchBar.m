@@ -56,7 +56,7 @@
 
 - (void)initView
 {
-    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 84);
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, 44);
     if (!_isHiddenCancelButton)
     {
         [self addSubview:self.cancelButton];
@@ -96,22 +96,22 @@
 {
     if (!_textField)
     {
-        _textField = [[UITextField alloc] initWithFrame:CGRectMake(7, 7, self.frame.size.width-7*2, 50)];
+        _textField = [[UITextField alloc] initWithFrame:CGRectMake(7, 5, self.frame.size.width-7*2, 40)];
         _textField.delegate = self;
         _textField.borderStyle = UITextBorderStyleNone;
         _textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         _textField.returnKeyType = UIReturnKeySearch;
         _textField.enablesReturnKeyAutomatically = YES;
-        _textField.font = [UIFont systemFontOfSize:18.0f];
+        _textField.font = [UIFont systemFontOfSize:14.0f];
         _textField.clearButtonMode = UITextFieldViewModeAlways;
         [_textField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
         _textField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         _textField.borderStyle = UITextBorderStyleNone;
-        _textField.layer.cornerRadius = 10.0f;
+        _textField.layer.cornerRadius = 20.0f;
         _textField.layer.masksToBounds = YES;
         _textField.leftView.contentMode = UIViewContentModeScaleAspectFit;
-          _textField.backgroundColor = [UIColor purpleColor];
-//         _textField.backgroundColor = [UIColor colorWithRed:240.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0];
+//           _textField.backgroundColor = [UIColor purpleColor];
+        _textField.backgroundColor = [UIColor colorWithRed:240.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0];
     }
     return _textField;
 }
